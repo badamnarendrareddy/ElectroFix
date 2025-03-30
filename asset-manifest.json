@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ElectroFix/static/css/main.ab5bd5ea.css",
+    "main.js": "/ElectroFix/static/js/main.a89c2ac3.js",
+    "static/js/453.ed3810f9.chunk.js": "/ElectroFix/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/ElectroFix/index.html",
+    "main.ab5bd5ea.css.map": "/ElectroFix/static/css/main.ab5bd5ea.css.map",
+    "main.a89c2ac3.js.map": "/ElectroFix/static/js/main.a89c2ac3.js.map",
+    "453.ed3810f9.chunk.js.map": "/ElectroFix/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ab5bd5ea.css",
+    "static/js/main.a89c2ac3.js"
+  ]
+}
