@@ -1,0 +1,72 @@
+/* index.css */
+.repair-services-container{
+  padding: 20px;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.service-item {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-header {
+  padding: 20px;
+  text-align: center;
+}
+
+.service-icon {
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.service-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.service-item h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.dropdown-content {
+  padding: 10px;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-content li {
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}

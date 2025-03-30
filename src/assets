@@ -1,0 +1,9 @@
+// Replace this:
+import SparkyLogo from '../../assets/sparky-logo.svg';
+
+// With either:
+const SparkyLogo = null; // and handle it in your JSX
+// Or just use text in your sidebar header:
+<div className="sidebar-header">
+  <h2>Sparky Admin</h2>
+</div>

@@ -1,0 +1,412 @@
+/* Navbar Container - Modern Glass Morphism */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 5%;
+  background: rgba(0, 123, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar:hover {
+  background: rgba(0, 123, 255, 0.95);
+}
+
+/* Logo - Animated */
+.logo a {
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+}
+
+.logo a:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+.logo a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.logo a:hover::after {
+  width: 100%;
+}
+
+/* Nav Links Container */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Nav Link Items - Floating Effect */
+.nav-link {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border-radius: 50px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.nav-link:hover::before {
+  left: 100%;
+}
+
+/* Search Bar - Modern Style */
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  padding: 10px 15px 10px 40px;
+  border: none;
+  border-radius: 50px;
+  width: 250px;
+  font-size: 14px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input:focus {
+  width: 300px;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus + .search-icon {
+  color: #007bff;
+  transform: scale(1.1);
+}
+
+/* Dropdown Menu - Modern Card */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  list-style: none;
+  padding: 15px 0;
+  min-width: 220px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-menu li {
+  margin: 0;
+  transition: all 0.2s ease;
+}
+
+.dropdown-menu li:hover {
+  background: rgba(0, 123, 255, 0.05);
+}
+
+.dropdown-menu a, .dropdown-menu button {
+  color: #333;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dropdown-menu a:hover, .dropdown-menu button:hover {
+  color: #007bff;
+  background: rgba(0, 123, 255, 0.05);
+  padding-left: 25px;
+}
+
+/* Special Signup Option */
+.signup-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+}
+
+.signup-option span {
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.signup-option a {
+  background: linear-gradient(135deg, #007bff, #00bfff);
+  color: white !important;
+  padding: 8px 15px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.signup-option a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+  background: linear-gradient(135deg, #0069d9, #00a8ff);
+  padding-left: 15px !important;
+}
+
+/* Divider */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.1), transparent);
+  margin: 10px 0;
+}
+
+/* Cart Badge - Floating */
+.cart-badge {
+  background: linear-gradient(135deg, #ff4d4d, #ff7676);
+  color: white;
+  border-radius: 50px;
+  padding: 3px 8px;
+  font-size: 11px;
+  font-weight: bold;
+  margin-left: 5px;
+  box-shadow: 0 2px 10px rgba(255, 77, 77, 0.3);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Mobile Menu Icon - Animated */
+.mobile-menu-icon {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.mobile-menu-icon:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+/* Admin Link - Premium Look */
+.admin-link {
+  background: linear-gradient(135deg, #4a148c, #7b1fa2);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(74, 20, 140, 0.3);
+  transition: all 0.3s ease;
+}
+
+.admin-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(74, 20, 140, 0.4);
+  background: linear-gradient(135deg, #7b1fa2, #9c27b0);
+}
+
+/* Logout Button - Warning Style */
+.logout-button {
+  background: none;
+  border: none;
+  color: #ff5252;
+  font: inherit;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0 0 12px 12px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.logout-button:hover {
+  background: rgba(255, 82, 82, 0.1);
+  color: #ff0000;
+}
+
+/* Responsive Design - Mobile Friendly */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 5%;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 123, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 5%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+  .search-bar input {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .dropdown-menu a, .dropdown-menu button {
+    color: white;
+    padding: 12px 15px;
+  }
+
+  .dropdown-menu a:hover, .dropdown-menu button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+
+  .signup-option a {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .divider {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Location Dropdown - Enhanced */
+.location-dropdown {
+  position: relative;
+  cursor: pointer;
+}
+
+.location-dropdown .dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  z-index: 1000;
+  width: 220px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.location-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.dropdown-icon {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+}
+
+.location-dropdown:hover .dropdown-icon {
+  transform: rotate(180deg);
+}

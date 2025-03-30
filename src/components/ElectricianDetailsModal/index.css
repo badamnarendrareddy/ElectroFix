@@ -1,0 +1,160 @@
+/* Electrician Details Modal */
+.electrician-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .electrician-modal-content {
+    background-color: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .electrician-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .electrician-header .avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #4a6cf7;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 auto 1rem;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+  }
+  
+  .status-badge.pending {
+    background-color: #fff3cd;
+    color: #856404;
+  }
+  
+  .status-badge.approved {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .status-badge.rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .detail-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .detail-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .detail-item span:first-child {
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .document-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a6cf7;
+    text-decoration: none;
+  }
+  
+  .document-link:hover {
+    text-decoration: underline;
+  }
+  
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .verify-button, .reject-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .verify-button {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .verify-button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .reject-button {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  .reject-button:hover {
+    background-color: #d32f2f;
+  }

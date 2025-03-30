@@ -1,0 +1,166 @@
+
+
+/* Home Container */
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.home-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.home-container p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Single Container for All Appliances */
+.appliances-single-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.appliance-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  text-align: center;
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.appliance-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.appliance-item p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between text and icon */
+}
+
+/* Dropdown Icon */
+.dropdown-icon {
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.appliance-header.open .dropdown-icon {
+  transform: rotate(180deg); /* Rotate icon when dropdown is open */
+}
+
+/* Appliance Header */
+.appliance-header {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Dropdown Styles */
+.brands-dropdown {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  position: absolute; /* Position dropdown below the appliance */
+  top: 100%; /* Position it right below the appliance */
+  left: 0;
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+.brand-item {
+  padding: 8px;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: left; /* Align text to the left */
+}
+
+.brand-item:hover {
+  background-color: #f1f1f1;
+}
+
+/* Banner Container */
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 20px;
+}
+
+.banner-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.banner-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Banner Dots */
+.banner-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .appliance-item {
+    width: 120px;
+  }
+
+  .appliance-item img {
+    height: 120px;
+  }
+
+  .banner-slide img {
+    height: 200px;
+  }
+}

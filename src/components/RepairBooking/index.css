@@ -1,0 +1,760 @@
+/* index.css */
+
+/* Base Styles */
+:root {
+  --primary-color: #4361ee;
+  --secondary-color: #3f37c9;
+  --accent-color: #4cc9f0;
+  --light-color: #f8f9fa;
+  --dark-color: #212529;
+  --success-color: #4bb543;
+  --warning-color: #f0ad4e;
+  --danger-color: #d9534f;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+/* Main Container */
+.repair-booking {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Hero Section */
+.repair-booking__hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 40px 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.repair-booking__hero-title {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.repair-booking__hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.repair-booking__features {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.repair-booking__feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+}
+
+.repair-booking__feature-icon {
+  font-size: 1.2rem;
+}
+
+/* Booking Flow Steps */
+.repair-booking__flow {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.repair-booking__step {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 25px;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  opacity: 0.5;
+  transition: var(--transition);
+}
+
+.repair-booking__step--active {
+  opacity: 1;
+}
+
+.repair-booking__step-number {
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  background: var(--primary-color);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: var(--box-shadow);
+}
+
+.repair-booking__step-content {
+  margin-top: 10px;
+}
+
+.repair-booking__step-title {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+/* Form Styles */
+.repair-booking__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.repair-booking__form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.repair-booking__form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.repair-booking__form-label {
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+.repair-booking__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.repair-booking__input-icon {
+  position: absolute;
+  left: 12px;
+  color: var(--primary-color);
+}
+
+.repair-booking__input,
+.repair-booking__textarea {
+  width: 100%;
+  padding: 12px 15px 12px 40px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.repair-booking__textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.repair-booking__input:focus,
+.repair-booking__textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+/* Pincode Search */
+.repair-booking__pincode-search {
+  display: flex;
+  gap: 10px;
+}
+
+.repair-booking__pincode-search .repair-booking__input {
+  flex: 1;
+}
+
+.repair-booking__search-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.repair-booking__search-button:hover {
+  background: var(--secondary-color);
+}
+
+.repair-booking__search-button--disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Electricians Grid */
+.repair-booking__electricians {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.repair-booking__electrician {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  border: 1px solid #eee;
+}
+
+.repair-booking__electrician:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.repair-booking__electrician-header {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.repair-booking__electrician-avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.repair-booking__electrician-info {
+  flex: 1;
+}
+
+.repair-booking__electrician-name {
+  margin-bottom: 5px;
+}
+
+.repair-booking__electrician-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.repair-booking__rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.repair-booking__star--filled {
+  color: #ffc107;
+}
+
+.repair-booking__star--empty {
+  color: #e4e5e9;
+}
+
+.repair-booking__distance {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #666;
+}
+
+.repair-booking__electrician-details {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.repair-booking__detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.repair-booking__electrician-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.repair-booking__profile-button,
+.repair-booking__select-button {
+  flex: 1;
+  padding: 10px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.repair-booking__profile-button {
+  background: white;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.repair-booking__profile-button:hover {
+  background: #f0f4ff;
+}
+
+.repair-booking__select-button {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.repair-booking__select-button:hover {
+  background: var(--secondary-color);
+}
+
+/* Time Slots */
+.repair-booking__timeslots {
+  margin-top: 20px;
+}
+
+.repair-booking__timeslots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.repair-booking__timeslot {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.repair-booking__timeslot:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.repair-booking__timeslot--selected {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Booking Confirmation */
+.repair-booking__confirmation {
+  text-align: center;
+  padding: 20px;
+}
+
+.repair-booking__confirmation-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--success-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.repair-booking__checkmark {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.repair-booking__details-card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin: 25px 0;
+  text-align: left;
+  box-shadow: var(--box-shadow);
+}
+
+.repair-booking__confirmation-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.repair-booking__button--primary,
+.repair-booking__button--secondary {
+  padding: 12px 25px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.repair-booking__button--primary {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.repair-booking__button--primary:hover {
+  background: var(--secondary-color);
+}
+
+.repair-booking__button--secondary {
+  background: white;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.repair-booking__button--secondary:hover {
+  background: #f0f4ff;
+}
+
+/* Modal Styles */
+.repair-booking__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.repair-booking__modal--show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.repair-booking__modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.repair-booking__modal-content {
+  background: white;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(20px);
+  transition: var(--transition);
+}
+
+.repair-booking__modal--show .repair-booking__modal-content {
+  transform: translateY(0);
+}
+
+.repair-booking__modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.repair-booking__modal-header {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.repair-booking__modal-avatar {
+  width: 80px;
+  height: 80px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.repair-booking__modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.repair-booking__modal-section {
+  margin-bottom: 20px;
+}
+
+.repair-booking__modal-section-title {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.repair-booking__modal-footer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Loading States */
+.repair-booking__loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  gap: 15px;
+}
+
+.repair-booking__spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(67, 97, 238, 0.2);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* No Results State */
+.repair-booking__empty-state {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.repair-booking__empty-state-image {
+  width: 100px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+.repair-booking__empty-state-title {
+  margin-bottom: 10px;
+  color: var(--dark-color);
+}
+
+.repair-booking__empty-state-description {
+  color: #666;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .repair-booking__form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .repair-booking__features {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .repair-booking__electricians {
+    grid-template-columns: 1fr;
+  }
+  
+  .repair-booking__confirmation-actions {
+    flex-direction: column;
+  }
+  
+  .repair-booking__modal-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .repair-booking__modal-avatar {
+    margin-bottom: 15px;
+  }
+}
+
+/* Utility Classes */
+.repair-booking__hidden {
+  display: none;
+}
+/* Location Specific Styles */
+.repair-booking__location-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.repair-booking__location-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: #f0f4ff;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.repair-booking__location-toggle:hover {
+  background: #e0e8ff;
+}
+
+.repair-booking__location-toggle--active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.repair-booking__location-toggle:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.repair-booking__manual-address-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 0.9rem;
+}
+
+.repair-booking__manual-address-btn:hover {
+  background: #f5f5f5;
+}
+
+.repair-booking__current-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.repair-booking__textarea--address {
+  min-height: 80px;
+  padding-left: 40px;
+}
+
+.repair-booking__error {
+  color: var(--danger-color);
+  font-size: 0.8rem;
+  margin-top: 5px;
+}
+/* Confirmation Modal Specific Styles */
+.repair-booking__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.repair-booking__modal--show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.repair-booking__modal-content {
+  background: white;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.repair-booking__modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.repair-booking__modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.repair-booking__spinner {
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

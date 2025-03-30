@@ -1,0 +1,221 @@
+
+
+/* Container for Login/Signup */
+.login-signup-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f5;
+}
+
+/* Left Half: Login/Signup Form */
+.login-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-details h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.login-details p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Form Styling */
+form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Adds consistent spacing between form elements */
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.input-group:focus-within {
+  border-color: #007bff; /* Highlight input group when focused */
+}
+
+.input-group .input-icon {
+  margin-right: 10px;
+  color: #666;
+}
+
+.input-group input,
+.input-group select {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-group input::placeholder {
+  color: #999;
+}
+
+/* Country Code Dropdown */
+.country-code {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.country-code select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Submit Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Google Login Button */
+.google-login-button {
+  width: 100%;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.google-login-button:hover {
+  background-color: #f1f1f1;
+}
+
+.google-login-button .google-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* OR Divider */
+.or-divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #666;
+  position: relative;
+}
+
+.or-divider::before,
+.or-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+  position: absolute;
+  top: 50%;
+  width: 45%;
+}
+
+.or-divider::before {
+  left: 0;
+}
+
+.or-divider::after {
+  right: 0;
+}
+
+/* Toggle Link */
+.toggle-link {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.toggle-link span {
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.toggle-link span:hover {
+  color: #0056b3;
+}
+
+/* Error Message */
+.error {
+  color: #ff4d4d;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Right Half: Image Slider */
+.image-section {
+  flex: 1;
+  background-color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-signup-container {
+    flex-direction: column;
+  }
+
+  .login-details {
+    padding: 20px;
+  }
+
+  .image-section {
+    display: none; /* Hide image slider on smaller screens */
+  }
+
+  .input-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-group .input-icon {
+    margin-bottom: 10px;
+  }
+
+  .country-code {
+    margin-bottom: 10px;
+  }
+}

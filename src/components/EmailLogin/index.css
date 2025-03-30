@@ -1,0 +1,23 @@
+/* src/components/GoogleLogin.css */
+.google-login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(205, 106, 106);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .google-login-button:hover {
+    background-color: #c95151;
+  }
+  
+  .google-icon {
+    font-size: 20px;
+  }
