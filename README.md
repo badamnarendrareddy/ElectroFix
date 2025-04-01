@@ -1,5 +1,5 @@
 🔗 Live Demo
-🌐 GitHub Pages: https://badamnarendrareddy.github.io/ElectroFix/
+🌐 GitHub Pages: https://electro-fix-ten.vercel.app/signup/Login
 
 📹 Demo Video (Instructions)
 Record a short Loom video showing: https://www.flexclip.com/share/10076496565316a1088ca702a117f7c64679735e.html
